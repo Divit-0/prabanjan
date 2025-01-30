@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Input the numbers
+    printf("Enter the first number (a): ");
+    scanf("%d", &a);
+
+    printf("Enter the second number (b): ");
+    scanf("%d", &b);
+
+    // Swap the numbers using bitwise XOR
+    a = a ^ b;  // XOR a and b, store result in a
+    b = a ^ b;  // XOR a and b again to get original value of a
+    a = a ^ b;  // XOR a and b again to get original value of b
+
+    // Output the swapped numbers
+    printf("After swapping: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
